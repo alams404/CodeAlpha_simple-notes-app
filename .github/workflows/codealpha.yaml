@@ -35,7 +35,7 @@ jobs:
 
       - name: Build and push image
         run: |
-          IMAGE="$ACR_NAME.azurecr.io/$IMAGE_NAME
+          IMAGE="$ACR_NAME.azurecr.io/$IMAGE_NAME"
           docker build -t "$IMAGE:${{ github.sha }}" -t "$IMAGE:latest" .
           docker push "$IMAGE:${{ github.sha }}"
           docker push "$IMAGE:latest"
