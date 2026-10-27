@@ -31,7 +31,7 @@ jobs:
           ACR_USER=$(az acr credential show --name "$ACR_NAME" --query username -o tsv)
           ACR_PASS=$(az acr credential show --name "$ACR_NAME" --query "passwords[0].value" -o tsv)
           echo "::add-mask::$ACR_PASS"
-          echo "$ACR_PASS" | docker login "$ACR_NAME.azurecr.io" -u "$ACR_UASER" --password-stdin
+          echo "$ACR_PASS" | docker login "$ACR_NAME.azurecr.io" -u "$ACR_USER" --password-stdin
 
       - name: Build and push image
         run: |
