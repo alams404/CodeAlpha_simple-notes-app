@@ -9,8 +9,8 @@ on:
 # must match image name in variable.tf
 env:
   IMAGE_NAME: codealpha-simple-notes-app
-  ACR_NAME: ${{ secrets.ACR_NAME}}
-  WEBAPP_NAME: ${{ screts.WEBAPP_NAME}}
+  ACR_NAME: ${{ secrets.ACR_NAME }}
+  WEBAPP_NAME: ${{ secrets.WEBAPP_NAME }}
 
 jobs:
   build-and-deploy:
